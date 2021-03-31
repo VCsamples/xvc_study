@@ -81,9 +81,15 @@
           <hr>
                 <p>
                   There are two systems implemented for comparison:<br>
-                  <hr>
-                  (1) <b> PPG-XVC</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WORLD parametric vocoder.<br>
-                  (2) <b> CyclePPG-XVC</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WaveRNN neural vocoder.<br>
+                  (1) <b> PPG-XVC</b>: This is the PPG-based XVC framework. It is the baseline system without the linguistic cycle consistency loss.<br>
+                  (2) <b> CyclePPG-XVC</b>: This is proposed XVC framework with linguistic cycle consistency loss.<br>
+                  <br>
+
+                  <b>Source</b>: Speech from a source speaker, we hope to preserve the speech content. <br>
+                  <b>Target</b>: Speech from a target speaker, we hope the converted speech sound like this speaker's voice. <br>
+                  <b>Reference</b>: Reference speech from the target speaker speaking the source content. <br>
+            <hr>
+
             <b>en &rarr; cn</b>:<br>
             we are converting an English source utterance to a Mandarin target speaker's voice.<br>
             <b>cn &rarr; en</b>:<br>
@@ -162,145 +168,89 @@
 
                           </tr>
                         <tr>
-                          <th scope="row">(a) MT-WORLD</th>
+                          <th scope="row">(1) PPG-XVC </th>
                           <td>
                             <audio controls>
-                              <source src="./audio/a/1.wav" type="audio/wav" />
+                              <source src="./audio/PPG-XVC/1.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
                           <td>
                             <audio controls>
-                              <source src="./audio/a/2.wav" type="audio/wav" />
+                              <source src="./audio/PPG-XVC/2.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
                           <td>
                             <audio controls>
-                              <source src="./audio/a/3.wav" type="audio/wav" />
+                              <source src="./audio/PPG-XVC/3.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
                           <td>
                             <audio controls>
-                              <source src="./audio/a/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-
-                          </tr>
-                        <tr>
-                          <th scope="colmun">(b) MT-WaveRNN</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/b/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/b/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/b/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/b/4.wav" type="audio/wav" />
+                              <source src="./audio/PPG-XVC/4.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
 
                           </tr>
                         <tr>
-                           <th scope="column">(c) STWaveRNN</th>
+                          <th scope="colmun">(a) CyclePPG-XVC</th>
                           <td>
                             <audio controls>
-                              <source src="./audio/c/1.wav" type="audio/wav" />
+                              <source src="./audio/CyclePPG-XVC/1.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
                           <td>
                             <audio controls>
-                              <source src="./audio/c/2.wav" type="audio/wav" />
+                              <source src="./audio/CyclePPG-XVC/2.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
                           <td>
                             <audio controls>
-                              <source src="./audio/c/3.wav" type="audio/wav" />
+                              <source src="./audio/CyclePPG-XVC/3.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
                           <td>
                             <audio controls>
-                              <source src="./audio/c/4.wav" type="audio/wav" />
+                              <source src="./audio/CyclePPG-XVC/4.wav" type="audio/wav" />
                               Your browser does not support the audio element.
                             </audio>
                           </td>
 
                           </tr>
-                        <tr>
-                          <th scope="column" nowrap>(d) MTWaveRNN</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
+                          <tr>
+                            <th scope="row">Reference    </th>
+                            <td>
+                              <audio controls>
+                                <source src="./audio/reference/1.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="./audio/reference/2.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="./audio/reference/3.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <source src="./audio/reference/4.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                              </audio>
+                            </td>
 
-                        </tr>
-                        <tr>
-                          <th scope="column" nowrap>(e) MTWaveRNN+</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/e/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/e/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/e/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/e/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-
-                        </tr>
+                            </tr>
                         </p>
                               <div class="big-screen">
                                 <table class="table">
@@ -372,145 +322,88 @@
 
                                       </tr>
                                     <tr>
-                                      <th scope="row">(a) MT-WORLD</th>
+                                      <th scope="row">(1) PPG-XVC</th>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/a/5.wav" type="audio/wav" />
+                                          <source src="./audio/PPG-XVC/5.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/a/6.wav" type="audio/wav" />
+                                          <source src="./audio/PPG-XVC/6.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/a/7.wav" type="audio/wav" />
+                                          <source src="./audio/PPG-XVC/7.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/a/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-
-                                      </tr>
-                                    <tr>
-                                      <th scope="colmun">(b) MT-WaveRNN</th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/b/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/b/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/b/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/b/8.wav" type="audio/wav" />
+                                          <source src="./audio/PPG-XVC/8.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
 
                                       </tr>
                                     <tr>
-                                       <th scope="column">(c) STWaveRNN</th>
+                                      <th scope="colmun">(2) CyclePPG-XVC</th>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/c/5.wav" type="audio/wav" />
+                                          <source src="./audio/CyclePPG-XVC/5.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/c/6.wav" type="audio/wav" />
+                                          <source src="./audio/CyclePPG-XVC/6.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/c/7.wav" type="audio/wav" />
+                                          <source src="./audio/CyclePPG-XVC/7.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
                                       <td>
                                         <audio controls>
-                                          <source src="./audio/c/8.wav" type="audio/wav" />
+                                          <source src="./audio/CyclePPG-XVC/8.wav" type="audio/wav" />
                                           Your browser does not support the audio element.
                                         </audio>
                                       </td>
-
                                       </tr>
-                                    <tr>
-                                      <th scope="column" nowrap>(d) MTWaveRNN</th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
+                                      <tr>
+                                        <th scope="row">Reference    </th>
+                                        <td>
+                                          <audio controls>
+                                            <source src="./audio/reference/5.wav" type="audio/wav" />
+                                            Your browser does not support the audio element.
+                                          </audio>
+                                        </td>
+                                        <td>
+                                          <audio controls>
+                                            <source src="./audio/reference/6.wav" type="audio/wav" />
+                                            Your browser does not support the audio element.
+                                          </audio>
+                                        </td>
+                                        <td>
+                                          <audio controls>
+                                            <source src="./audio/reference/7.wav" type="audio/wav" />
+                                            Your browser does not support the audio element.
+                                          </audio>
+                                        </td>
+                                        <td>
+                                          <audio controls>
+                                            <source src="./audio/reference/8.wav" type="audio/wav" />
+                                            Your browser does not support the audio element.
+                                          </audio>
+                                        </td>
 
-                                    </tr>
-                                    <tr>
-                                      <th scope="column" nowrap>(e) MTWaveRNN+</th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/e/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/e/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/e/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/e/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-
-                                    </tr>
+                                        </tr>
                       </tbody>
                     </table>
                   </div>
