@@ -47,22 +47,9 @@
         <div class="row align-items-center">
           <div class="col-md-12">
             <h2><a class="text-light">
-               Cross-Lingual Voice Conversion with a Cycle Consistency Loss on Linguistic Representation </a></h2>
+               Optimization of Cross-Lingual Voice Conversion <br> with Linguistics Losses to Reduce Foreign Accents</a></h2>
             <p>
-                          <p>
-              <div class="row">
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=_POzpM4AAAAJ&hl=en">Yi Zhou <sup>1</sup> </a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com.sg/citations?user=6gc45QcAAAAJ&hl=en&oi=ao">Xiaohai Tian <sup>1</sup>  </a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=K6zhweAAAAAJ&hl=en">Zhizheng Wu <sup>2</sup> </a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=z8_x7C8AAAAJ&hl=en">Haizhou Li <sup>1</sup> </a>  </div>
-              </div>
-            </p>
-             <p><a class="text-light"><sup>1</sup> Department of Electrical and Computer Engineering, National University of Singapore, Singapore</a><br>
-             <a class="text-light"><sup>2</sup> Facebook, United States</p></a>
+
               <div class="row">
               </div>
             </p>
@@ -76,337 +63,455 @@
     <div class="container">
       <div class="row" id="result">
         <div class="col-md-12">
-          <h2>Speech Samples</h2>
-          <hr>
-          <p>The model is evaluated with bilingual speakers from:<br>
-            the EMIME Mandarin Bilingual Database [<a class="text-success" href="#1">1</a>]:</p>
+          <h2>Speech Samples for the Intelligibility Study</h2>
           <hr>
                 <p>
-                  There are two systems implemented for comparison:<br>
-                  (1) <b> Baseline</b>: This is the PPG-based XVC framework. It is the baseline system without the linguistic cycle consistency loss.<br>
-                  (2) <b> CyclePPG-XVC</b>: This is proposed XVC framework with linguistic cycle consistency loss.<br>
+
+                  (1) <b> VCC 2020</b>: We select top 4 systems from all submissions. VCC 2020 only converts English speech [1].<br>
+                  (2) <b> In-House System</b>: Our in-house XVC system, which converts both English and Mandarin Speech [2].<br>
                   <br>
 
-                  <b>Source</b>: Speech from a source speaker, we hope to preserve the speech content. <br>
-                  <b>Target</b>: Speech from a target speaker, we hope the converted speech sound like this speaker's voice. <br>
-                  <b>Reference</b>: Reference speech from the target speaker speaking the source content. <br>
+                  <b>Source</b>: The natural speech from a source speaker, we hope to preserve the speech content and native accent. <br>
             <hr>
 
-            <b>en &rarr; cn</b>:<br>
-            we are converting an English source utterance to a Mandarin target speaker's voice.<br>
-            <b>cn &rarr; en</b>:<br>
-            we are converting a Mandarin source utterance to an English target speaker's voice.<br>
+            <b>Intra-Lingual</b>:<br>
+            Both source and target speakers speak the same language.<br>
+            <b>Cross-Lingual</b>:<br>
+            The source and target speakers speak different languages. <br>
 
             <hr>
-            <b>F</b> : Female Speaker <br>
-            <b>M</b> : Male Speaker
-
                   <div class="big-screen">
                     <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width:200px;"> VCC 2020 System</th>
+                        <th>  </th>
+                        <th>  </th>
+                        <th>  </th>
+                        <th>  </th>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Sample 1</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Source <em>(SEF1)</em></th>
+                        <td>
+                          <audio controls>
+                          <source src="./audio/vcc/source/SEF1.wav" type="audio/wav" />
+                          Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Converted</th>
+                        <th colspan="2">Intra-Lingual</th>
+                        <th colspan="2">Cross-Lingual</th>
+                      </tr>
+                      <tr>
+                        <th>System</th>
+                        <td><em>TEF1</em></td>
+                        <td><em>TEM1</em></td>
+                        <td><em>TMF1</em></td>
+                        <td><em>TMM1</em></td>
+                      </tr>
+                      <tr>
+                        <th>T10</th>
+                        <td>
+                          <audio controls>
+                            <source src="./audio/vcc/T10/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T13</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T25</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T29</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
                       <thead>
                         <tr>
-                          <th style="width:200px;">Intra-gender</th>
-                          <th>cn (F) &rarr; en (F)</th>
-                          <th>cn (M) &rarr; en (M)</th>
-                          <th>en (F) &rarr; cn (F)</th>
-                          <th>en (M) &rarr; cn (M)</th>
+                          <th colspan="5">Sample 2</th>
                         </tr>
                       </thead>
-                      <tbody>
+
+                      <tr>
+                        <th>Source <em>(SEF2)</em></th>
+                        <td>
+                          <audio controls>
+                          <source src="./audio/vcc/source/SEF1.wav" type="audio/wav" />
+                          Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Converted</th>
+                        <th colspan="2">Intra-Lingual</th>
+                        <th colspan="2">Cross-Lingual</th>
+                      </tr>
+                      <tr>
+                        <th>System</th>
+                        <td><em>TEF1</em></td>
+                        <td><em>TEM1</em></td>
+                        <td><em>TMF1</em></td>
+                        <td><em>TMM1</em></td>
+                      </tr>
+                      <tr>
+                        <th>T10</th>
+                        <td>
+                          <audio controls>
+                            <source src="./audio/vcc/T10/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T13</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T25</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T29</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEF1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <thead>
                         <tr>
-                          <th scope="row">Source    </th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/source/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/source/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/source/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/source/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
+                          <th colspan="5">Sample 3</th>
+                        </tr>
+                      </thead>
 
-                          </tr>
+                      <tr>
+                        <th>Source <em>(SEM1)</em></th>
+                        <td>
+                          <audio controls>
+                          <source src="./audio/vcc/source/SEM1.wav" type="audio/wav" />
+                          Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Converted</th>
+                        <th colspan="2">Intra-Lingual</th>
+                        <th colspan="2">Cross-Lingual</th>
+                      </tr>
+                      <tr>
+                        <th>System</th>
+                        <td><em>TEF1</em></td>
+                        <td><em>TEM1</em></td>
+                        <td><em>TMF1</em></td>
+                        <td><em>TMM1</em></td>
+                      </tr>
+                      <tr>
+                        <th>T10</th>
+                        <td>
+                          <audio controls>
+                            <source src="./audio/vcc/T10/SEM1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEM1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEM1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEM1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T13</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T25</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T29</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM1_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM1_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM1_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM1_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <thead>
                         <tr>
-                          <th scope="row">Target    </th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/target/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/target/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/target/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/target/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
+                          <th colspan="5">Sample 4</th>
+                        </tr>
+                      </thead>
 
-                          </tr>
-                        <tr>
-                          <th scope="row">(1) Baseline </th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/PPG-XVC/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/PPG-XVC/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/PPG-XVC/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/PPG-XVC/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
+                      <tr>
+                        <th>Source <em>(SEM2)</em></th>
+                        <td>
+                          <audio controls>
+                          <source src="./audio/vcc/source/SEM2.wav" type="audio/wav" />
+                          Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Converted</th>
+                        <th colspan="2">Intra-Lingual</th>
+                        <th colspan="2">Cross-Lingual</th>
+                      </tr>
+                      <tr>
+                        <th>System</th>
+                        <td><em>TEF1</em></td>
+                        <td><em>TEM1</em></td>
+                        <td><em>TMF1</em></td>
+                        <td><em>TMM1</em></td>
+                      </tr>
+                      <tr>
+                        <th>T10</th>
+                        <td>
+                          <audio controls>
+                            <source src="./audio/vcc/T10/SEM2_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEM2_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEM2_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T10/SEM2_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T13</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM2_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM2_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM2_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T13/SEM2_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T25</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM2_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM2_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM2_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T25/SEM2_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
+                      <tr>
+                        <th>T29</th>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM2_TEF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM2_TEM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM2_TMF1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                        <td>                          <audio controls>
+                                                  <source src="./audio/vcc/T29/SEM2_TMM1.wav" type="audio/wav" />
+                                                  Your browser does not support the audio element.
+                                                  </audio></td>
+                      </tr>
 
-                          </tr>
-                        <tr>
-                          <th scope="colmun">(a) CyclePPG-XVC</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/CyclePPG-XVC/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/CyclePPG-XVC/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/CyclePPG-XVC/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/CyclePPG-XVC/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
 
-                          </tr>
-                          <tr>
-                            <th scope="row">Reference    </th>
-                            <td>
-                              <audio controls>
-                                <source src="./audio/reference/1.wav" type="audio/wav" />
-                                Your browser does not support the audio element.
-                              </audio>
-                            </td>
-                            <td>
-                              <audio controls>
-                                <source src="./audio/reference/2.wav" type="audio/wav" />
-                                Your browser does not support the audio element.
-                              </audio>
-                            </td>
-                            <td>
-                              <audio controls>
-                                <source src="./audio/reference/3.wav" type="audio/wav" />
-                                Your browser does not support the audio element.
-                              </audio>
-                            </td>
-                            <td>
-                              <audio controls>
-                                <source src="./audio/reference/4.wav" type="audio/wav" />
-                                Your browser does not support the audio element.
-                              </audio>
-                            </td>
-
-                            </tr>
-                        </p>
-                              <div class="big-screen">
-                                <table class="table">
-                                  <thead>
-                                    <tr>
-
-                                      <th style="width:200px;">Inter-gender</th>
-                                      <th>cn (F) &rarr; en (M)</th>
-                                      <th>cn (M) &rarr; en (F)</th>
-                                      <th>en (F) &rarr; cn (M)</th>
-                                      <th>en (M) &rarr; cn (F)</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th scope="row">Source    </th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/source/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/source/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/source/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/source/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-
-                                      </tr>
-                                    <tr>
-                                      <th scope="row">Target    </th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/target/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/target/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/target/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/target/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-
-                                      </tr>
-                                    <tr>
-                                      <th scope="row">(1) Baseline </th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/PPG-XVC/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/PPG-XVC/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/PPG-XVC/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/PPG-XVC/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-
-                                      </tr>
-                                    <tr>
-                                      <th scope="colmun">(2) CyclePPG-XVC</th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/CyclePPG-XVC/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/CyclePPG-XVC/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/CyclePPG-XVC/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/CyclePPG-XVC/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Reference    </th>
-                                        <td>
-                                          <audio controls>
-                                            <source src="./audio/reference/5.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                          </audio>
-                                        </td>
-                                        <td>
-                                          <audio controls>
-                                            <source src="./audio/reference/6.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                          </audio>
-                                        </td>
-                                        <td>
-                                          <audio controls>
-                                            <source src="./audio/reference/7.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                          </audio>
-                                        </td>
-                                        <td>
-                                          <audio controls>
-                                            <source src="./audio/reference/8.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                          </audio>
-                                        </td>
-
-                                        </tr>
-                      </tbody>
+                    </tbody>
                     </table>
                   </div>
 
@@ -419,8 +524,13 @@
           <div>
             <p>
               <a name="1">[1]</a>
-               Mirjam Wester and Hui Liang, “The emime mandarin bilingual database,” Tech. Rep. EDI-INF-RR-1396, The
-               University of Edinburgh, 2011.
+              Z. Yi, W.-C. Huang, X. Tian, J. Yamagishi, R. K. Das, T. Kinnunen, Z. Ling, and T. Toda,
+              “Voice conversion challenge 2020—intra-lingual semi-parallel and cross-lingual voice conversion,”
+              in Joint Workshop for the Blizzard Challenge and Voice Conversion Challenge 2020, pp. 80–98.<br>
+              <a name="2">[2]</a>
+              Y. Zhou, X. Tian, H. Xu, R. K. Das, and H. Li, “Cross-lingual voice conversion with
+              bilingual phonetic posteriorgram and average modeling,” in IEEE ICASSP, 2019, pp. 6790–6794.
+
             </p>
           </div>
         </div>
